@@ -25,7 +25,7 @@ class Triangle
 
   class TriangleError < StandardError
   end
-  
+
 end
 
 binding.pry
