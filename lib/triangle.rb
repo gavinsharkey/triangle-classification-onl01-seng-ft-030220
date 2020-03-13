@@ -10,7 +10,7 @@ class Triangle
   end
 
   def kind
-    if @all.any? { |side| !(side.positive?) } || @side1 + @side2 < @side3 || @side1 + @side3 < @side2 || @side2 + @side3 < @side1
+    if @all.any? { |side| !(side.positive?) } || @side1 + @side2 <= @side3 || @side1 + @side3 <= @side2 || @side2 + @side3 <= @side1
       raise TriangleError
     else
       if @all.uniq.length == 1
@@ -27,5 +27,3 @@ class Triangle
   end
 
 end
-
-binding.pry
